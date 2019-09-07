@@ -26,12 +26,12 @@ where T : Singleton<T>, new()
 /// <summary>
 /// Monobehaviour's singleton
 /// </summary>
-public abstract class SingletonMonoBehaviour<T> : MonoBehaviour
+public class SingletonMonoBehaviour<T> : MonoBehaviour
      where T : SingletonMonoBehaviour<T>
 {
     public static T Ins { get; protected set; }
 
-    protected abstract void UnityAwake();
+    protected virtual void UnityAwake() { }
 
     private void Awake()
     {
