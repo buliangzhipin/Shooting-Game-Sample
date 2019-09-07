@@ -8,7 +8,7 @@ public abstract class ItemSource : ScriptableObject, Source
 {
     public int id;
     public string desc;
-    public Image image;
+    public Sprite image;
     public abstract ItemContent GenerateItem();
 }
 
