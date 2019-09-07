@@ -8,6 +8,8 @@ public class EquipmentManager : SingletonMonoBehaviour<EquipmentManager>
     [NonSerialized] public GameObject SelectedItem;
     public GameObject ItemPanel;
     private bool itemIsShowed => ItemPanel.activeSelf;
+    public ItemContent[] currentEquipment = new ItemContent[3];
+    public ItemContent[] backpackEquipment = new ItemContent[5];
     protected override void UnityAwake() { }
 
     void Update()
@@ -36,4 +38,11 @@ public class EquipmentManager : SingletonMonoBehaviour<EquipmentManager>
         ItemPanel.SetActive(false);
     }
 
+    public void GetItem(ItemContent item)
+    {
+    }
+    public void EquipItem(ItemContent item)
+    {
+        item.OnEquip();
+    }
 }
