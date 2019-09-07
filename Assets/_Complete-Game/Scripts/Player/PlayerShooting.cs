@@ -18,6 +18,7 @@ namespace CompleteProject
         LineRenderer gunLine;                           // Reference to the line renderer.
         AudioSource gunAudio;                           // Reference to the audio source.
         Light gunLight;                                 // Reference to the light component.
+        PlayerMovement movement;
         public Light faceLight;								// Duh
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 
@@ -32,6 +33,7 @@ namespace CompleteProject
             gunLine = GetComponent<LineRenderer>();
             gunAudio = GetComponent<AudioSource>();
             gunLight = GetComponent<Light>();
+            movement = GetComponentInParent<PlayerMovement>();
             //faceLight = GetComponentInChildren<Light> ();
         }
 
@@ -95,8 +97,7 @@ namespace CompleteProject
             // gunLine.SetPosition(0, transform.position);
 
             // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
-            shootRay.origin = transform.position;
-            shootRay.direction = transform.forward;
+
 
             CreateBullet();
 
@@ -127,6 +128,8 @@ namespace CompleteProject
 
         void CreateBullet()
         {
+            shootRay.origin = transform.position;
+            shootRay.direction = transform.forward;
             var bullet = GameObject.Instantiate(DataManager.Ins.bullet, transform.position, Quaternion.identity);
             var behaviour = bullet.GetComponent<BulletBehaviour>();
             behaviour.Initial(transform.position, transform.forward, damagePerShot);

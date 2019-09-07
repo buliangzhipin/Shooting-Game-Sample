@@ -35,7 +35,7 @@ namespace CompleteProject
             }
             var hitParticles = Instantiate(DataManager.Ins.hitParticles, transform.position, other.transform.rotation);
             hitParticles.Play();
-            Destroy(hitParticles, 2f);
+            Destroy(hitParticles.gameObject, 2f);
             Destroy(this.gameObject);
 
         }
