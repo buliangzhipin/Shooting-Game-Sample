@@ -68,6 +68,7 @@
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\RandomAnimationPoint.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\RandomParticlePoint.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Helpers\VolumeHandler.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Managers\DataManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\GameOverManager.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Managers\PauseManager.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\_Complete-Game\Scripts\Player\PlayerShooting.cs" />
+     <Compile Include="Assets\_Complete-Game\Scripts\Util\Singleton.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <None Include="Assets\SurvivalShooter_Third-PartyNotice.txt" />
      <None Include="Assets\Fonts\LuckiestGuy\FontLicense.txt" />
@@ -102,11 +104,11 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -285,20 +287,20 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements.Editor">
  <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>C:/Users/q2298/Documents/Github/Shooting Game Sample/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
