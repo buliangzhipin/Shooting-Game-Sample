@@ -60,10 +60,10 @@ namespace CompleteProject
             EnemyHealthUIManager.Ins.Show(this, previousHealth);
 
             // Set the position of the particle system to where the hit was sustained.
-            hitParticles.transform.position = hitPoint;
+            // hitParticles.transform.position = hitPoint;
 
-            // And play the particles.
-            hitParticles.Play();
+            // // And play the particles.
+            // hitParticles.Play();
 
             // If the current health is less than or equal to zero...
             if (currentHealth <= 0)

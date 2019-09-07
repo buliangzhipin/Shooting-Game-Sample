@@ -32,8 +32,12 @@ namespace CompleteProject
                     // ... the enemy should take damage.
                     enemyHealth.TakeDamage(damagePerShot, this.transform.position);
                 }
-                Destroy(this.gameObject);
             }
+            var hitParticles = Instantiate(DataManager.Ins.hitParticles, transform.position, other.transform.rotation);
+            hitParticles.Play();
+            Destroy(hitParticles, 2f);
+            Destroy(this.gameObject);
+
         }
     }
 }
