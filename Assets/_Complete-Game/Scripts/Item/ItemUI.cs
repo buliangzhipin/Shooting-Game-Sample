@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ItemUI : MonoBehaviour
+public class ItemUI : MonoBehaviour, IPointerClickHandler
 {
     private Image itemImage;
 
@@ -14,12 +15,22 @@ public class ItemUI : MonoBehaviour
     private ItemContent item;
     public void SetItem(ItemContent item)
     {
-
+        this.item = item;
+        itemImage.sprite = item.image;
     }
 
     public void DeleteItem()
     {
         item = null;
+        itemImage.sprite = DataManager.Ins.emptyItem;
     }
-    public void
+    public void ShowItem()
+    {
+
+    }
+
+    public void OnPointerClick(PointerEventData pointerEventData)
+    {
+        EquipmentManager.Ins.SelectItem(this);
+    }
 }

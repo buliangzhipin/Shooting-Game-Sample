@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemContent : Content
 {
-    // public Sprite 
+    public Sprite image => source.image;
     public ItemSource source;
     public void SetSource(ItemSource owner)
     {
